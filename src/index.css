@@ -11,7 +11,7 @@ body {
 	padding: 0;
 }
 
-.loading-text {
+/* .loading-text {
 	animation: pulsate 2s infinite;
 }
 
@@ -25,4 +25,4 @@ body {
 	100% {
 		transform: scale(1);
 	}
-}
+} */

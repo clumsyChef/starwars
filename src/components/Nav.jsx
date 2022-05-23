@@ -10,7 +10,6 @@ const Nav = () => {
 	const userContext = useContext(UserContext);
 	const isAuthenticated = userContext.userData.authenticated;
 	const location = useLocation();
-
 	const navigate = useNavigate();
 	const removeAuth = () => {
 		removeCookie("username");
@@ -36,12 +35,16 @@ const Nav = () => {
 						Login
 					</Link>
 				)}
-				<button
-					onClick={removeAuth}
-					className="transition-all duration-300 text-2xl font-semibold text-teal-700 border-2 border-teal-700 rounded-md p-2 hover:bg-teal-700 hover:text-slate-200 ml-10"
-				>
-					Logout
-				</button>
+
+				<div className="flex">
+					<p className="text-2xl font-semibold flex items-center">Hello There... {cookies.username}</p>
+					<button
+						onClick={removeAuth}
+						className="transition-all duration-300 text-2xl font-semibold text-teal-700 border-2 border-teal-700 rounded-md p-2 hover:bg-teal-700 hover:text-slate-200 ml-10"
+					>
+						Logout
+					</button>
+				</div>
 			</div>
 		);
 	}
